@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.02.1
+%define		kdeappsver	24.02.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kldap
 Summary:	LDAP access API for KDE
 Name:		ka6-%{kaname}
-Version:	24.02.1
+Version:	24.02.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	124b7990f3736b144e39725ef8104230
+# Source0-md5:	ae661e8b31d5b759795ba67d7bd45e63
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
