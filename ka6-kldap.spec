@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kldap
 Summary:	LDAP access API for KDE
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	f66314b1d20e7d3b8ef6cb349e6856b5
+# Source0-md5:	00178a3ba0c799e21789853d8dc600a6
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -90,11 +90,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}_qt.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKPim6LdapCore.so.*.*
+%{_libdir}/libKPim6LdapCore.so.*.*
 %ghost %{_libdir}/libKPim6LdapCore.so.6
-%attr(755,root,root) %{_libdir}/libKPim6LdapWidgets.so.*.*
+%{_libdir}/libKPim6LdapWidgets.so.*.*
 %ghost %{_libdir}/libKPim6LdapWidgets.so.6
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/ldap.so
+%{_libdir}/qt6/plugins/kf6/kio/ldap.so
 %{_datadir}/qlogging-categories6/kldap.categories
 %{_datadir}/qlogging-categories6/kldap.renamecategories
 
